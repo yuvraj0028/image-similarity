@@ -4,5 +4,10 @@
 # Ignore Gradle build output directory
 build
 
+# Ignore bin files while gradle build
+bin
+
 # Ignore vscode workspace related files
 .vscode
+
+gradle.properties
