@@ -1,4 +1,4 @@
-package io.github.yuvraj0028.imagesimilarity.service;
+package io.github.yuvraj0028.service;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.util.*;
 
 import javax.imageio.ImageIO;
 
-import io.github.yuvraj0028.imagesimilarity.bktree.BKTree;
-import io.github.yuvraj0028.imagesimilarity.models.HashType;
-import io.github.yuvraj0028.imagesimilarity.utils.HashUtils;
+import io.github.yuvraj0028.bktree.BKTree;
+import io.github.yuvraj0028.models.HashType;
+import io.github.yuvraj0028.utils.HashUtils;
 
 import java.awt.image.BufferedImage;
 

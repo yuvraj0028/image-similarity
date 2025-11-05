@@ -9,3 +9,6 @@ bin
 
 # Ignore vscode workspace related files
 .vscode
+
+# Ignore target files
+target/

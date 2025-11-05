@@ -1,4 +1,4 @@
-package io.github.yuvraj0028.imagesimilarity.utils;
+package io.github.yuvraj0028.utils;
 
 /**
  * Utility class for calculating the Hamming Distance between two long integers.

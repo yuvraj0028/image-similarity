@@ -25,11 +25,6 @@ A lightweight Java library to compute image similarity using perceptual hashing 
 </dependency>
 ```
 
-### Gradle
-```gradle
-implementation 'io.github.yuvraj0028:image-similarity:1.0.0'
-```
-
 ---
 
 ## Usage

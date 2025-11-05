@@ -1,4 +1,4 @@
-package io.github.yuvraj0028.imagesimilarity.models;
+package io.github.yuvraj0028.models;
 
 /**
  * Defines the supported types of perceptual hashes for image similarity calculation.

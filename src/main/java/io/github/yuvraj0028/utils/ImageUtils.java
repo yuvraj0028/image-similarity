@@ -1,4 +1,4 @@
-package io.github.yuvraj0028.imagesimilarity.utils;
+package io.github.yuvraj0028.utils;
 
 import java.awt.Graphics2D;
 import java.awt.Image;

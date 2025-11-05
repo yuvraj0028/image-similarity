@@ -1,4 +1,4 @@
-package io.github.yuvraj0028.imagesimilarity.bktree;
+package io.github.yuvraj0028.bktree;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 // Assuming this utility class provides the Hamming distance calculation
-import io.github.yuvraj0028.imagesimilarity.utils.Hamming;
+import io.github.yuvraj0028.utils.Hamming;
 
 /**
  * Implements a Burkhard-Keller Tree (BK-Tree) for efficient nearest neighbor search
