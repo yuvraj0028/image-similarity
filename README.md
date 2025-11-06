@@ -105,7 +105,7 @@ long hash = service.computeAndStore(image1, HashType.PHASH);
 File image2 = new File("images/cat2.jpg");
 long hash2 = service.computeAndStore(image2, HashType.PHASH);
 
-// user can define hamming distance until which they want to find similar images
+// User can define hamming distance until which they want to find similar images
 int hammingDistance = 10;
 
 // Find similar images based on hashes using BK-TREE
