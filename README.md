@@ -38,18 +38,79 @@ implementation 'io.github.yuvraj0028:image-similarity:1.0.0'
 
 ### Generate and store hash for an image
 ```java
+import io.github.yuvraj0028.service.ImageSimilarityService;
+import io.github.yuvraj0028.models.HashType;
+```
+
+```java
+// PHASH ALGORITHM
 ImageSimilarityService service = new ImageSimilarityService();
 
 File image = new File("images/cat1.jpg");
 long hash = service.computeAndStore(image, HashType.PHASH);
 
+// hashed image stored in BK-Tree for comparison
 System.out.println("Hash: " + hash);
+
+// DHASH ALGORITHM
+image = new File("images/cat2.jpg");
+hash = service.computeAndStore(image, HashType.DHASH);
+
+// hashed image stored in BK-Tree for comparison
+System.out.println("Hash: " + hash);
+
+// BLOCKHASH ALGORITHM
+image = new File("images/cat3.jpg");
+hash = service.computeAndStore(image, HashType.BLOCKHASH);
+
+// hashed image stored in BK-Tree for comparison
+System.out.println("Hash: " + hash);
+```
+
+### Get Hamming Distance
+```java
+import io.github.yuvraj0028.service.ImageSimilarityService;
+import io.github.yuvraj0028.utils.Hamming;
+import io.github.yuvraj0028.models.HashType;
+```
+
+```java
+// PHASH ALGORITHM
+ImageSimilarityService service = new ImageSimilarityService();
+
+File image1 = new File("images/cat1.jpg");
+long hash = service.computeAndStore(image1, HashType.PHASH);
+
+File image2 = new File("images/cat2.jpg");
+long hash2 = service.computeAndStore(image2, HashType.PHASH);
+
+// Get hamming distance of the hashes
+int hammingDistance = Hamming.distanceLong(hash, hash2);
+System.out.println("Hamming distance: " + hammingDistance);
 ```
 
 ### Find similar images
 ```java
-File input = new File("images/cat2.jpg");
-List<String> similar = service.findSimilar(input, HashType.PHASH, 10);
+import io.github.yuvraj0028.service.ImageSimilarityService;
+import io.github.yuvraj0028.models.HashType;
+```
+
+```java
+// PHASH ALGORITHM
+ImageSimilarityService service = new ImageSimilarityService();
+
+File image1 = new File("images/cat1.jpg");
+long hash = service.computeAndStore(image1, HashType.PHASH);
+
+File image2 = new File("images/cat2.jpg");
+long hash2 = service.computeAndStore(image2, HashType.PHASH);
+
+// user can define hamming distance until which they want to find similar images
+int hammingDistance = 10;
+
+// Find similar images based on hashes using BK-TREE
+File input = new File("images/cat3.jpg");
+List<String> similar = service.findSimilar(input, HashType.PHASH, hammingDistance);
 
 System.out.println("Similar images: " + similar);
 ```
