@@ -100,7 +100,7 @@ import io.github.yuvraj0028.models.HashType;
 ImageSimilarityService service = new ImageSimilarityService();
 
 File image1 = new File("images/cat1.jpg");
-long hash = service.computeAndStore(image1, HashType.PHASH);
+long hash1 = service.computeAndStore(image1, HashType.PHASH);
 
 // User can define hamming distance until which they want to find similar images
 int hammingDistance = 10;
