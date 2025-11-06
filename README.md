@@ -79,13 +79,13 @@ import io.github.yuvraj0028.models.HashType;
 ImageSimilarityService service = new ImageSimilarityService();
 
 File image1 = new File("images/cat1.jpg");
-long hash = service.computeAndStore(image1, HashType.PHASH);
+long hash1 = service.computeAndStore(image1, HashType.PHASH);
 
 File image2 = new File("images/cat2.jpg");
 long hash2 = service.computeAndStore(image2, HashType.PHASH);
 
 // Get hamming distance of the hashes
-int hammingDistance = Hamming.distanceLong(hash, hash2);
+int hammingDistance = Hamming.distanceLong(hash1, hash2);
 System.out.println("Hamming distance: " + hammingDistance);
 ```
 
@@ -101,9 +101,6 @@ ImageSimilarityService service = new ImageSimilarityService();
 
 File image1 = new File("images/cat1.jpg");
 long hash = service.computeAndStore(image1, HashType.PHASH);
-
-File image2 = new File("images/cat2.jpg");
-long hash2 = service.computeAndStore(image2, HashType.PHASH);
 
 // User can define hamming distance until which they want to find similar images
 int hammingDistance = 10;
